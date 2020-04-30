@@ -13,7 +13,7 @@ Today, on Why We’re All Going to Die, the Sun is citing us a study from the 19
 
 **PROFESSORS warn mankind could die out because overcrowding could kill our mood for sex.**
 
-<img src="/assets/images/jan-19-the-sun.png">
+<img src="images/jan-19-the-sun.png">
 
 ## What does the research say?
 
