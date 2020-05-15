@@ -8,6 +8,6 @@ This workshop was run twice in February and April 2019. It focussed on connectin
 
 The workshop was accompanied by a workbook that could be taken away to use as needed.
 
-[Download the workbook here.]('/../../files/workbook.pdf)
+[Download the workbook here.]('/files/workbook.pdf){: .btn .btn--success}
 
-Bristol Doctoral College's Venture Fund funded this work. 
+Bristol Doctoral College's Venture Fund funded the development and delivery of the workshops. 

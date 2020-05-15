@@ -16,7 +16,7 @@ Each survey was sent out to all the same people, but a different subset replied 
 
 **Mission:** To join all 15+ dataframes in the form of a ‘full-join’ (in SQL speak).
 
-<img src="/assets/images/merge-dataframes.jpg">
+<img src="/images/merge-dataframes.jpg">
 
 I knew there must be a simple way to do this, but unfortunately all the examples online are for two datasets. With more than three dataframes to merge those options just get messy and impractical.
 

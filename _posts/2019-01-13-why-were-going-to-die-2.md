@@ -12,7 +12,7 @@ As predicted, there are more reasons we’re going to die. The tabloids just can
 
 Today, a Daily Express headline tells us…
 
-<img src="/assets/images/jan-19-asteroid.png">
+<img src="/images/jan-19-asteroid.png">
 
 This one actually made me laugh out loud (okay, it was a mild chuckle).
 
@@ -26,7 +26,7 @@ You shouldn’t be surprised that we are not about to be wiped out by an asteroi
 
 Are they oblivious to the idea that mis-reporting news and deliberately trying to cause panic is ethically wrong and irresponsible? Not only that, but this was also published over the weekend:
 
-<img src="/assets/images/jan-19-asteroid2.png">
+<img src="/images/jan-19-asteroid2.png">
 
 This makes it sound as though NASA is having to employ drastic measures to save us all from early extinction. If we take a closer look, a calm and reasoned scientist gives us some real information, right at the end of the article of course:
 

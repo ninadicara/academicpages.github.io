@@ -30,7 +30,7 @@ The research presented explained loneliness to be a feeling similar to hunger in
  threats. This can partly explain why some people find it hard to reintegrate socially after being isolated for a while. 
 
 Someone from Public Health England (Jude Stansfield) also did a talk about mental wellbeing and linked to the 
-[Foresight Report](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/292453/mental-capital-wellbeing-summary.pdf)
+[Foresight Report](https:/.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/292453/mental-capital-wellbeing-summary.pdf)
 (which I had never seen before!) which has loads of interesting info and research summaries about mental health issues - theres a section 
 about Looked After Children too, which is great as they often seem to be missed out as a key group in mental health research.  
 
@@ -56,7 +56,7 @@ benefit their resilience, not just families. It is the purpose of gatekeepers to
 Interestingly, children who grew up in low-risk home environments had worse resilience after receiving an intervention around resilience so 
 it's not a one-size-fits all thing! 
 
-<img src="/assets/images/2019-03-20-1.png">
+<img src="/images/2019-03-20-1.png">
 
 There's a [booklet called 'What Works'](http://resilienceresearch.org/files/whatworks/WhatWorks-Ungar-WebVersion.pdf) that he and his team have
 created. It is about designing resilience building youth programs, but would be helpful for designing interventions too I think. 
@@ -79,7 +79,7 @@ Research is showing that this is because your genetics are responsible for your 
  you are able to tell when you are full. Recommendations are that governmental level change is needed as with sodium in foods, and smoking 
  to produce changes. 
 
-<img src="/assets/images/2019-03-20-2.png">
+<img src="/images/2019-03-20-2.png">
 
 **_Suicide and Self-Harm_**
 There were a series of presentations on this topic by Dr Becky Mars, Bristol Uni, Dr Rory O'Connor, Uni of Glasgow and Prof Ellen Townsend, Notts Uni.

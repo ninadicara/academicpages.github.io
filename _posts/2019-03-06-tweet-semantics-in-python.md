@@ -3,7 +3,7 @@ title: "Tweet Semantics in Python"
 date: 2019-03-06T13:00:00-04:00
 categories:
   - Blog
-image: assets/images/semantics-python.jpg
+image: /images/semantics-python.jpg
 tags:
   - Python
   - Data
