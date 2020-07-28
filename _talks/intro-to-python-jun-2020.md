@@ -11,4 +11,4 @@ location: "GW4 BioMed MRC Doctoral Training Partnership"
 Designed and delivered an introduction to Python workshop for peers at the annual conference for our doctoral training centre. 
 
 
-The training material [can be found here](https://github.com/ninadicara/intro-to-python). 
+The training material was delivered virtually using Binder. The material [can be found here](https://github.com/ninadicara/intro-to-python). 
