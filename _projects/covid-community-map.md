@@ -6,7 +6,7 @@ header:
     teaser: /images/covidcommunities.png
 ---
 
-The COVID-19 Community Map was made through a collaboration between the Dynamic Genetics Lab and Research and Evaluation at Public Health Wales. I was part of the development team for this project, which is pubclically accessible at https://covidresponsemap.wales/
+The COVID-19 Community Map was made through a collaboration between the Dynamic Genetics Lab and Research and Evaluation at Public Health Wales. I was part of the development team for this project, which is pubclically accessible at [covidresponsemap.wales](https://covidresponsemap.wales/)
 
 The code for the project is available [here](https://github.com/DynamicGenetics/COVID-19-Community-Response).
 
