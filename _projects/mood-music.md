@@ -10,5 +10,5 @@ We were [awarded a seedcorn grant by the Jean Golding Institute](https://jeangol
 
 This project involves two main pieces of software. The first is a Telegram app to deliver the EMA questionnaires, and a Django app to administer the study.
   
-[GitHub Repository for the EMA App](https://github.com/ninadicara/Mood-Music-App)   
-[GitHub Repository for the Django Project](https://github.com/DynamicGenetics/ema-bot)  
+[GitHub Repository for the EMA App](https://github.com/DynamicGenetics/moodmusic)   
+[GitHub Repository for the Django Project](https://github.com//ema-bot)  
