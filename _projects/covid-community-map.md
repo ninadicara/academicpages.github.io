@@ -3,7 +3,7 @@ title: "COVID-19 Community Response Map"
 excerpt: "Mapping community resilience in Wales using open data"
 collection: portfolio
 header:
-    teaser: /images/covidcommunities.png
+    teaser: ../images/covidcommunities.png
 ---
 
 The COVID-19 Community Map was made through a collaboration between the Dynamic Genetics Lab and Research and Evaluation at Public Health Wales. I was part of the development team for this project, which is pubclically accessible at [covidresponsemap.wales](https://covidresponsemap.wales/)
