@@ -19,8 +19,8 @@ Education
 Experience
 ======
 * 2015-Now: Student Quality Reviewer for the Quality Assurance Agency for Higher Educaiton
-* 2016-17: Student Social Worker at Achieving for Children
 * 2017-18: ASYE Child Protection Social Worker at Achieving for Children
+* 2016-17: Student Social Worker at Achieving for Children
 * 2014-15: Student Surveys and Communicatons Assistant at Cardiff University
 
 For a full list of my employment and experience please request my CV or [see my LinkedIn profile](https://www.linkedin.com/in/ninadicara/). 
