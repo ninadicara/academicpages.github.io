@@ -10,6 +10,6 @@ This project is the result of our lab group winning a competition hosted by Bris
 
 Our 'curiosity toolkit' has so far involved several lab hackathons, one of which was based at We The Curious so that members of the public could come in and talk to us about what we were doing! 
 
-![Hackathon sign](../images/we-the-curious.jpeg)
+![Hackathon sign](../../images/we-the-curious.jpeg)
 
 The toolkit was going to be launched in May 2020 but unfortunately COVID-19 got in the way. We hope that we will be able to share it when We The Curious opens back up, along with the opening of their new Open City Lab. 
