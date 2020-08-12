@@ -9,11 +9,8 @@ tags:
   - PhD
 ---
 
-Something about the start of the new academic year makes me reflect, far more than the start of an actual new year.
-Crispy September mornings make me think about starting the new school year with fresh textbooks, new curriculums, 
-seating plans and the feelings of being that little bit older and mature than you were this time last year. 
-It also tends to be when I start to think about my aims for the next year, what I want to achieve and how I'm going to do it. 
-Given that, I thought I'd do a post to mark the start of the 'new year' and the start of my second year of my PhD with
+
+Given how much I love the start of the new academic year (recovering addiction to fresh stationary), I thought I'd do a post to mark the start of the 'new year' and the start of my second year of my PhD with
 the things I've been thinking about achieving this year...
 
 * Complete and write-up a machine learning model.
