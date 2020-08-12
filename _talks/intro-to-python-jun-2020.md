@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Python Workshop"
 collection: talks
-type: "Talk"
+type: "Workshop"
 permalink: /talks/into-to-python-jun-2020
 venue: "Annual Congress"
 date: 2020-06-01
@@ -12,3 +12,4 @@ Designed and delivered an introduction to Python workshop for peers at the annua
 
 
 The training material was delivered virtually using Binder. The material [can be found here](https://github.com/ninadicara/intro-to-python). 
+
