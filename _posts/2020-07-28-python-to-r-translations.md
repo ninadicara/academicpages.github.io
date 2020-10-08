@@ -16,13 +16,13 @@ After spending 3 months on a Python project (see the [COVID-19 community map her
 
 Usually when using Pandas it's really easy to apply a change to a data frame without allocating it to a new obejct by using the argument `in_place` as part of the function. Typically in R I'm using `dplyr`, so I would usually do something like...
 
-```R
+```
 df <- df %>% foo()
 ```
 
 But I've recently discovered that there are various versions of the well know pipe operator `%>%` as part of the [`magrittr` package](https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html). The *compound assignment pipe operator* looks like `%<>%` and would work like so:
 
-```R
+```
 library(magrittr)
 df %<>% foo()
 ```
@@ -45,7 +45,7 @@ df %>% dplyr::recode(...)
 
 My new favourite option though, to reduce how often this is necessary, is a package called `conflicted`, [written by Hadley Wickham](https://conflicted.r-lib.org/). If installed and loaded in your session, it will point out to you in the console when you are using a function that belongs to two packages. 
 
-```R
+```
 # Loading the library will mean you are notified of any conflicts, 
 # and will be asked to state a preference using :: or the below...
 library(conflicted)
@@ -66,7 +66,7 @@ The last function that I've found really useful in Python is from the `os` packa
 
 In any given file you can get the absolute file path of a current file using:
 
-```python
+```
 import os
 os.path.dirname(os.path.abspath(__file__))
 ```
@@ -85,7 +85,6 @@ Introducing [`here`](https://here.r-lib.org/) !  If you [make your directory of 
 
 For example if you had the following project structure:
 
-```bash
 ~
 ├───myProject.Rprj
 ├───data
@@ -97,11 +96,10 @@ For example if you had the following project structure:
 		│   └───figure1.png
     └───tables
 		    └───table1.csv
-```
 
 from `this_script.R` you could do:
 
-```R
+```
 library(here)
 library(ggplot2)
 
