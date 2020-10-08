@@ -25,10 +25,10 @@ I'm new enough to programming that I haven't previously used CircleCI or Travis,
 
 ### For reference...
 
-For this example I am using:
-Testing framework: **pytest**
-Database backend: **postgres**
-Django framework: [This cookie-cutter](https://github.com/pydanny/cookiecutter-django) (worth noting as it has a slightly different folder structure to classic Django setups)
+For this example I am using:  
+Testing framework: **pytest**  
+Database backend: **postgres**  
+Django framework: [This cookie-cutter](https://github.com/pydanny/cookiecutter-django) (worth noting as it has a slightly different folder structure to classic Django setups)  
 
 
 So, your tests run locally. What next?
@@ -40,8 +40,8 @@ Create the file ```.github/workflows/django.yml``` or get the template [from her
 
 
 
-*Q. Does it matter if it's on a branch rather than committed straight to my main branch?*
-*A. Nope! As soon as the file is on GitHub (by pushing your code, or creating it directly on the repo) the commands will be used as far as I can tell. 
+*Q. Does it matter if it's on a branch rather than committed straight to my main branch?*  
+A. Nope! As soon as the file is on GitHub (by pushing your code, or creating it directly on the repo) the commands will be used as far as I can tell. 
 
 ## 2. Decide when you want the actions to run
 
@@ -70,7 +70,7 @@ on:
 
 I started from GitHub's default YAML file for Django, but ended up having to make quite a lot of changes to get it to use the database properly, and include my environment variables etc. 
 
-Assuming you have a database then the `job` section will need a name (here it's called `runner-job`). You will need to tell it which system you want to run it on (I've chosen `ubuntu-latest`), the strategy for running it which allows you to test on multiple versions of a language. Here I'm just sticking with Python 3.8, but I could have had `[3.7, 3.8]` and run the tests on two Python versions. 
+Assuming you have a database then the `job` section will need a name (here it's called `runner-job`). You will need to tell it which system you want to run it on (I've chosen `ubuntu-latest`), and the strategy for running it which allows you to test on multiple versions of a language. Here I'm just sticking with Python 3.8, but I could have had `[3.7, 3.8]` and run the tests on two Python versions. 
 
 That gave this: 
 
@@ -83,10 +83,10 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        python-version: [3.8]
+        python-version: 3.8
 ```
 
-Next I had to deviate from the original template by including a `services` section which is where you set up the database. Figuring out how to do this was [HUGELY helped by this blog post](https://hacksoft.io/github-actions-in-action-setting-up-django-and-postgres/), which was one of few resources I could find that explained this step. There's also some instructions on [creating PostgreSQL service containers in the GitHub Docs](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-postgresql-service-containers) and [an exmaple of it being used in a workflow](https://github.com/actions/example-services/blob/master/.github/workflows/postgres-service.yml).
+Next I had to deviate from the original template by including a `services` section which is where you set up the database. Figuring out how to do this was [HUGELY helped by this blog post](https://hacksoft.io/github-actions-in-action-setting-up-django-and-postgres/), which was one of few resources I could find that explained this step. There's also some instructions on [creating PostgreSQL service containers in the GitHub Docs](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-postgresql-service-containers) and [an exmaple of it being used in a workflow](https://github.com/actions/example-services/blob/master/.github/workflows/postgres-service.yml). Even with all that help, this took some time to get right. 
 
 ```yaml
     services:
@@ -104,12 +104,13 @@ Next I had to deviate from the original template by including a `services` secti
         ports:
           - '5432:5432'
 ```
-It's important to remember that the username, password and port need to match what you have specified in your Django project's settings file. My set up has a local settings file where I can define credentials for a testing database for exactly this reason. If you're having problems it's very likely to be related to the specifications in your settings file. 
+It's important to remember that the username, password, name and port need to match what you have specified in your Django project's settings file. My set up has a local settings file where I can define credentials for a testing database for exactly this reason. If you're having problems it's very likely to be related to the specifications in your settings file. 
 
 ## 4. Define the steps needed to run the tests
 
 The last step is to actually define the `steps` needed to run your tests...
 
+{% raw %}
 ```yaml
     steps:
     - uses: actions/checkout@v2
@@ -130,10 +131,11 @@ The last step is to actually define the `steps` needed to run your tests...
     - name: Run Tests
       run: |
         pytest
-
 ```
+{% endraw %}
 
-You'll see that each step is seperated out and given a name. I chose these names, you can change them to whatever you like and nothing will go wrong. GitHub will use the names in the CI summary to show progress through each stage. 
+
+You'll see that each step is separated out and given a name. I chose these names, you can change them to whatever you like and nothing will go wrong. GitHub will use the names in the CI summary to show progress through each stage. 
 
 First we need to tell it to checkout the repository, which there is already a handy shortcut written for ([actions/checkout@v2](https://github.com/actions/checkout)); this command has lots of other options like checking out multiple repos etc if you need them. In the first `Set up Python` block we're executing this action using the settings we defined above in `strategy`. 
 
@@ -144,10 +146,9 @@ Lastly (finally??), now that our environment is all set up and running we get to
 
 ## 5. Add environment variables like API keys and secrets
 
-Now, the stages in Step 3 won't work on their own just yet, because I'm missing some crucial environment variables. At the top of the yaml file you can define a top level section called `env` that holds some generic environmental variables that your postgres server needs in the steps defined above.
+Now, the stages in Step 4 won't work on their own just yet, because I'm missing some crucial environment variables. At the top of the yaml file you can define a top level section called `env` that holds some generic environmental variables that your postgres server needs in the steps defined above.
 
 ```yaml
-
 env:
   POSTGRES_HOST: localhost
   POSTGRES_PORT: 5432
@@ -155,10 +156,11 @@ env:
   POSTGRES_PASSWORD: postgres
 ```
 
-Lastly, I also have some API keys written into my code by calling environment variables, for example `os.environ.get("TWILIO_AUTH_TOKEN")`. We obviously don't want to hard code these anywhere, but they are needed to run the tests. Thankfully GiThub is able to store secrets related to your repository which you can call in the testing workflow. To add your environment variables to the repository [follow these instructions](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets#creating-encrypted-secrets-for-a-repository). Not to self... remember not to enclose them in quotation marks when you save them in GitHub 🙄. *N.B. You need admin access to the repository to do this*
+Lastly, I also have some API keys written into my code by calling environment variables, for example `os.environ.get("TWILIO_AUTH_TOKEN")`. We obviously don't want to hard code these anywhere, but they are needed to run the tests. Thankfully GitHub is able to store secrets related to your repository which you can call in the testing workflow. To add your environment variables to the repository [follow these instructions](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets#creating-encrypted-secrets-for-a-repository). Note to self... remember not to enclose them in quotation marks when you save them in GitHub 🙄. *N.B. You need admin access to the repository to do this*
 
 Now, all we need to do is add them to the `env` list, remembering to give them the same names as they have in your code. 
 
+{% raw %}
 ```yaml
 env:
   # Postgres variables
@@ -171,14 +173,16 @@ env:
   SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_SECRET_ID }}
   TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
 ```
+{% endraw %}
 
 Now these environment variables are accessible to GitHub actions. 
 
 
 ## Done! 
 
-My final full workflow is pasted below in case it's of use. This took me quite a bit of time to work out, but I'm pleased I did! I now have regular health checks on my code and know very quickly when something has broken. Hopefully it'll be quicker next time too 😄.
+My final full workflow is pasted below in case it's of use. This took me quite a bit of time to work out, but I'm pleased I did! I now have regular (completley automated) health checks on my code and know very quickly when something has broken. Hopefully it'll be quicker to work out how to this for my next project now too 😄.
 
+{% raw %}
 ```yaml
 name: Testing
 
@@ -213,7 +217,7 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        python-version: [3.8]
+        python-version: 3.8
 
     services:
       postgres: 
@@ -250,3 +254,4 @@ jobs:
       run: |
         pytest
 ```
+{% endraw %}
