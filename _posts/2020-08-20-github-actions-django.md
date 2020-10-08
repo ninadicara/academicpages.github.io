@@ -8,7 +8,7 @@ tags:
   - python
 ---
 
-I've been hoping to use my current work on the [Mood Music]([Mood Music - Nina Di Cara](https://ninadicara.co.uk/projects/mood-music/)) project to test out GitHub Actions for continuous integration (CI). There are a few extra steps needed for the Django set up because of databases etc so this is a little guide to save my future self the pain of figuring it all out again.
+I've been hoping to use my current work on the [Mood Music](https://ninadicara.co.uk/projects/mood-music/)) project to test out GitHub Actions for continuous integration (CI). There are a few extra steps needed for the Django set up because of databases etc so this is a little guide to save my future self the pain of figuring it all out again.
 
 
 ## Why bother?
