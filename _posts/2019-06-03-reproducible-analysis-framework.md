@@ -38,12 +38,14 @@ Then copy this file for use in your analysis. You never want to be in a situatio
 file looked like because you've overwritten it so many times. 
 My file set up tends to look like this: 
 
-- Project Folder
--- raw-data-DO-NOT-TOUCH 
--- processed-data
--- analysis
--- figures
--- manuscript
+```
+Project Folder  
+├─ raw-data-DO-NOT-TOUCH  
+├─ processed-data  
+├─ analysis  
+├─ figures  
+└─ manuscript
+```  
 
 I might tweak in the future but at least for now everything is consistent and I can find all my scripts...
 

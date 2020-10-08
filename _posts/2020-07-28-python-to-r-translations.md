@@ -66,14 +66,14 @@ The last function that I've found really useful in Python is from the `os` packa
 
 In any given file you can get the absolute file path of a current file using:
 
-```Python
+```python
 import os
 os.path.dirname(os.path.abspath(__file__))
 ```
 
 You can also use `os` to create OS agnostic file paths: 
 
-```Python
+```python
 os.path.join("home", "project_folder", "file_I_want.py")
 ```
 
@@ -92,11 +92,8 @@ For example if you had the following project structure:
 │   └───my_data.RDS  
 ├───scripts  
 │   └───this_script.R  
-└───output  
-    ├───figures  
-		│   └───figure1.png  
-    └───tables  
-		    └───table1.csv  
+├───figures  
+└───tables  
 ```
 
 from `this_script.R` you could do:
@@ -110,10 +107,10 @@ df <- readRDS(here("data", "my_data.RDS"))
 
 # Write plot to correct folder
 figure1 <- ggplot(df, aes(x, y)) + geom_point()
-ggsave(here("output", "figures", "figure1.png"))
+ggsave(here("output", "figure1.png"))
 
 # Write dataframe to csv
-write.csv(df, here("output", "tables", "table1.csv"))
+write.csv(df, here("output", "table1.csv"))
 ```
 
 
