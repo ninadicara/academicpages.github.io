@@ -22,7 +22,7 @@ df <- df %>% foo()
 
 But I've recently discovered that there are various versions of the well know pipe operator `%>%` as part of the [`magrittr` package](https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html). The *compound assignment pipe operator* looks like `%<>%` and would work like so:
 
-```
+```R
 library(magrittr)
 df %<>% foo()
 ```
@@ -35,7 +35,7 @@ Returning to R reminded me how often there are package conflicts with R packages
 
 The first way is a fairly common one, to specify the package you mean when you're using the function from it by stating the package name, followed by two colons. This would look like: 
 
-```
+```R
 # Original 
 df %>% recode(...)
 
@@ -45,7 +45,7 @@ df %>% dplyr::recode(...)
 
 My new favourite option though, to reduce how often this is necessary, is a package called `conflicted`, [written by Hadley Wickham](https://conflicted.r-lib.org/). If installed and loaded in your session, it will point out to you in the console when you are using a function that belongs to two packages. 
 
-```
+```R
 # Loading the library will mean you are notified of any conflicts, 
 # and will be asked to state a preference using :: or the below...
 library(conflicted)
@@ -66,14 +66,14 @@ The last function that I've found really useful in Python is from the `os` packa
 
 In any given file you can get the absolute file path of a current file using:
 
-```
+```Python
 import os
 os.path.dirname(os.path.abspath(__file__))
 ```
 
 You can also use `os` to create OS agnostic file paths: 
 
-```
+```Python
 os.path.join("home", "project_folder", "file_I_want.py")
 ```
 
@@ -85,21 +85,23 @@ Introducing [`here`](https://here.r-lib.org/) !  If you [make your directory of 
 
 For example if you had the following project structure:
 
-~
-├───myProject.Rprj
-├───data
-│   └───my_data.RDS
-├───scripts
-│   └───this_script.R
-└───output
-    ├───figures
-		│   └───figure1.png
-    └───tables
-		    └───table1.csv
+```bash
+~  
+├───myProject.Rprj  
+├───data  
+│   └───my_data.RDS  
+├───scripts  
+│   └───this_script.R  
+└───output  
+    ├───figures  
+		│   └───figure1.png  
+    └───tables  
+		    └───table1.csv  
+```
 
 from `this_script.R` you could do:
 
-```
+```R
 library(here)
 library(ggplot2)
 
@@ -116,4 +118,4 @@ write.csv(df, here("output", "tables", "table1.csv"))
 
 
 
-Hopefully someone else will find this useful :smile:
+Hopefully someone else will find this useful :)
